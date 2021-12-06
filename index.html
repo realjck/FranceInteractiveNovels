@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#000000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>France Interactive Novels</title>
+  <link href="assets/libs/fontawesome/css/all.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+<div class="infopage">
+
+	<h1>France Interactive Novel</h1>
+
+	<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 viewBox="0 0 319 92" style="enable-background:new 0 0 319 92;" xml:space="preserve">
+	<style type="text/css">
+		.st0{fill:#FFFFFF;}
+		.st1{fill:#FF4D2B;}
+	</style>
+	<g>
+		<g>
+			<polygon class="st0" points="49.13,46.63 92.13,71.46 92.13,21.8 		"/>
+			<polygon class="st0" points="269.87,46.63 226.87,21.8 226.87,71.46 		"/>
+		</g>
+		<rect x="134.19" y="18.86" class="st1" width="54.27" height="54.27"/>
+	</g>
+	</svg>
+
+	<h2>Guide des visual novels et romans graphiques interactifs francophones</h2>
+	<i class="far fa-play-circle"></i>
+	<p>Cette page répertorie les visual novels et romans graphiques interactifs disponibles en Français. Il s'agit d'une liste non-exhaustive de titres sélectionnés vis-à-vis de leur qualité et de leur intérêt.</p>
+</div>
+<div class="navbar">
+	<div id="navbar_left">
+		<div id="nav_logo"></div>
+		<div id="navsort_release" class="navsort active"><i class="fas fa-angle-down"></i>Date de sortie</div>
+		<div id="navsort_note" class="navsort"><i class="fas fa-angle-down"></i>Note</div>
+		<div id="navsort_title" class="navsort"><i class="fas fa-angle-down"></i>A-Z</div>
+	</div>
+	<!-- Rounded switch -->
+	<label class="switch">
+		<i class="fas fa-sun"></i>
+	  <input id="darkmode" type="checkbox">
+	  <span class="slider round"></span>
+	</label>
+</div>
+<div class="page">
+	<div class="sidebar">
+		<div class="categorie" id="catall">
+			<div>tout cocher</div>
+			<div>
+				<i id ="catall-on" class="fas fa-check-circle"></i>
+			</div>
+		</div>
+	</div>
+	<div id class="wrapper"></div>
+	<div id="infobox_overlay" style="display:none"></div>
+	<div id="navbox">
+		<i id="navbox_left" class="far fa-arrow-alt-circle-left" style="display:none"></i>
+		<i id="navbox_right" class="far fa-arrow-alt-circle-right" style="display:none"></i>
+	</div>
+	<div id="infobox" style="display:none">
+		<i class="far fa-times-circle"></i>
+		<div id="infobox_note"></div>
+		<div id="infobox_release"></div>
+		<div id="infobox_title"></div>
+		<img>
+		<div id="infobox_description"></div>
+		<div id="infobox_infos">
+			<div id="infobox_editor"></div>
+			<div id="infobox_price"></div>
+			<div id="infobox_duration"></div>
+			<div id="infobox_link1"></div>
+			<div id="infobox_link2"></div>
+		</div>
+		<div id="infobox_points">
+			<div id="infobox_plus">
+				<i class="fas fa-heart"></i>Point(s) fort(s)
+				<ul></ul>
+			</div>
+			<div id="infobox_minus">
+				<i class="fas fa-meh"></i>Point(s) faible(s)
+				<ul></ul>
+			</div>
+		</div>
+		<div id="infobox_categories"></div>
+	</div>
+</div>
+<script src="assets/libs/jquery/jquery-1.12.4.min.js"></script>
+<script src="assets/libs/js.cookie/js.cookie-2.1.4.min.js"></script>
+<script src="assets/data/categories.js"></script>
+<script src="assets/data/themes.js"></script>
+<script src="assets/app/app.js"></script>
+</body>
+</html>

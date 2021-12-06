@@ -1,0 +1,30 @@
+body {
+	padding: 1em;
+	overflow: hidden;
+}
+
+.item {
+	display: flex;
+	margin-bottom: 1em;
+}
+.item-thumb {
+    width: 10em;
+	margin-right: 1em;
+}
+.item button.btn.btn-default {
+    margin: 0.5em;
+}
+.item-title {
+    font-weight: 800;
+}
+.item-desc {
+    width: 20em;
+}
+.item-release {
+    color: #B0B0B0;
+}
+.col-xs-6 {
+    overflow: scroll;
+    max-height: 100vh;
+	padding-bottom: 1em;
+}
