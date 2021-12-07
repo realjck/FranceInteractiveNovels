@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Readme</title>
+  <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div id="markdown-contents" style="padding:1em"></div>
+		</div>
+	</div>
+<script src="assets/libs/jquery/jquery-1.12.4.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/libs/showdown/showdown.min.js"></script>
+<script>
+	$.get('README.md', function(data) {
+		var sdconv = new showdown.Converter();
+		$("#markdown-contents").html(sdconv.makeHtml(data));
+	
+	}, 'text');
+</script>
+</body>
+</html>
