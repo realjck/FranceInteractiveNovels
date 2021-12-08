@@ -5,25 +5,25 @@ var Entries;
 
 // LANDING PAGE
 
+
+$("i.fas.fa-info-circle").on("click", function(){
+	window.open("readme.html");
+});
+
 $("body").css("overflow", "hidden");
-$(".infopage i").hover(function(e){
+$("#infopage_top > i").hover(function(e){
 	$(e.currentTarget).removeClass("far");
 	$(e.currentTarget).addClass("fas");
 }, function(e){
 	$(e.currentTarget).removeClass("fas");
 	$(e.currentTarget).addClass("far");
 });
-$(".infopage i").click(function() {
-	$( ".infopage" ).animate({
-		left: "-=100vw"
-	}, 1000, function() {
-		$(".infopage").hide();
-		$("body").css("overflow", "inherit");
-	});
+$("#infopage_top > i").click(function() {
+	$(".infopage").hide();
+	$("body").css("overflow", "inherit");
 });
 
 $("#nav_logo").on("click", function(e){
-	$(".infopage").css("left", "0");
 	$(".infopage").show();
 	$("body").css("overflow", "hidden");
 });

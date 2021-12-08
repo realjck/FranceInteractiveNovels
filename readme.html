@@ -19,7 +19,6 @@
 	$.get('README.md', function(data) {
 		var sdconv = new showdown.Converter();
 		$("#markdown-contents").html(sdconv.makeHtml(data));
-	
 	}, 'text');
 </script>
 </body>

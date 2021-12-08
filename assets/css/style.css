@@ -30,35 +30,66 @@ body{
 .infopage {
 	position: fixed;
     z-index: 1;
-    background-color: #435a84;
+    background-color: #fee9bb;
     height: 200vh;
-    width: 50vw;
-    padding-left: 25vw;
-    padding-right: 25vw;
 	color: white;
 }
+.infopage img{
+	width: 150px;
+	margin-left: calc(50vw - 75px);
+	margin-top: 50px;
+}
 .infopage h1 {
-    text-transform: uppercase;
-    font-weight: 400;
+	font-family: "Lobster", sans-serif;
+    font-weight: normal;
     letter-spacing: 0.05em;
 	text-align: center;
     font-size: 40px;
-    margin-top: 50px;
+	color: black;
+    line-height: 20px;
+}
+.infopage h1 span {
+    color: red;
+    text-transform: uppercase;
+    font-size: 25px;
+	margin-left: 0.25em;
+}
+i.fas.fa-info-circle {
+    font-size: x-large;
+    margin-left: 0.25em;
+    cursor: pointer;
 }
 .infopage h2 {
     text-align: center;
-    font-size: x-large;
-    margin: 10px 0;
+	font-size: 15px;
+	color: black;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-top: 0.35em;
 }
 .infopage p {
     letter-spacing: 0.05em;
     font-style: italic;
     margin-top: 20px;
 }
-.infopage i {
+#infopage_top > i {
     font-size: 100px;
-    margin-left: calc(25vw - 50px);
+    margin-left: calc(50vw - 50px);
     cursor: pointer;
+    color: black;
+	margin-top: 25px;
+	text-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+}
+#infopage_top {
+    height: 60vh;
+}
+#infopage_banner {
+	width: 100vw;
+	height: 40vh;
+	background: url('../images/html/banner.png');
+	background-size: cover;
+	background-position: top;
+    background-repeat: no-repeat;
 }
 
 
@@ -80,7 +111,7 @@ body{
     text-transform: uppercase;
     line-height: 50px;
 	cursor: pointer;
-	margin-left: 20px;
+	margin-left: 15px;
     letter-spacing: 0.05em;
 }
 .navbar > div> div.active {
@@ -95,7 +126,7 @@ body{
 	height: 40px;
 	background-color: #fff000;
 	margin: 5px 0px 0px 5px;
-	background: url('../images/html/franceinteractivenovels_logo.png');
+	background: url('../images/html/backbutton.svg');
 	background-size: cover;
 }
 .switch i {
@@ -359,17 +390,6 @@ div#infobox_editor {
 	}
 }
 @media (max-width: 480px) {
-	.infopage {
-		width: 80vw;
-		padding-left: 10vw;
-		padding-right: 10vw;
-	}
-	.infopage h1 {
-		font-size: 30px;
-	}
-	.infopage i {
-		margin-left: calc(40vw - 50px);
-	}
 	.navbar div {
 		margin-left: 10px;
 		font-size: smaller;
@@ -412,6 +432,11 @@ FONTS
 	font-family: "Helv";
 	src: url(../fonts/HelveticaNeueLTStd-Blk.otf) format("opentype");
 	font-weight: 900;
+}
+@font-face {
+	font-family: "Lobster";
+	src: url(../fonts/Lobster-Regular.ttf) format("truetype");
+	font-weight: normal;
 }
 
 /* The switch - the box around the slider */
