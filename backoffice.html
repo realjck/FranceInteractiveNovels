@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>France Interactive Novels Back Office</title>
+  <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/backoffice.css" />
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-6">
+				<div id="items"></div>
+				<!-- ADD BUTTON-->
+				<button class="btn btn-default btn-success" id="items_add">Add</button>
+			</div>
+			<div class="col-xs-6" id="edit" style="display:none">
+				<div class="form-group">
+					<label for="edit_title">Titre</label>
+					<input type="text" class="form-control" id="edit_title">
+				</div>
+				<div class="form-group">
+					<label for="edit_name">Name</label>
+					<input type="text" class="form-control" id="edit_name">
+				</div>
+				<b>Image:</b>
+					<input type="file" name="fileToUpload" id="file_upload" class="form-control">
+					<button class="btn btn-default" id="file_submit" onclick="uploadFile()">Upload Image</button>
+				<br/>
+				<br/>
+				<div class="form-group">
+					<label for="edit_release">YYYY-MM-DD</label>
+					<input type="text" class="form-control" id="edit_release">
+				</div>
+				<div class="form-group">
+					<label for="edit_note">Note</label>
+					<input type="text" class="form-control" id="edit_note">
+				</div>
+				<div class="form-group">
+					<label for="edit_editor">Editor</label>
+					<input type="text" class="form-control" id="edit_editor">
+				</div>
+				<div class="form-group">
+					<label for="edit_duration">Duration</label>
+					<input type="text" class="form-control" id="edit_duration">
+				</div>
+				<div class="form-group">
+					<label for="edit_price">Price</label>
+					<input type="text" class="form-control" id="edit_price">
+				</div>
+				<div class="form-group">
+					<label for="edit_description">Description</label>
+					<textarea class="form-control" rows="5" id="edit_description"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="edit_plus1">Plus1</label>
+					<input type="text" class="form-control" id="edit_plus1">
+				</div>
+				<div class="form-group">
+					<label for="edit_plus2">Plus2</label>
+					<input type="text" class="form-control" id="edit_plus2">
+				</div>
+				<div class="form-group">
+					<label for="edit_plus3">Plus3</label>
+					<input type="text" class="form-control" id="edit_plus3">
+				</div>
+				<div class="form-group">
+					<label for="edit_minus1">Minus1</label>
+					<input type="text" class="form-control" id="edit_minus1">
+				</div>
+				<div class="form-group">
+					<label for="edit_minus2">Minus2</label>
+					<input type="text" class="form-control" id="edit_minus2">
+				</div>
+				<div class="form-group">
+					<label for="edit_minus3">Minus3</label>
+					<input type="text" class="form-control" id="edit_minus3">
+				</div>
+				<div class="form-group">
+					<label for="edit_link1">Link1</label>
+					<input type="text" class="form-control" id="edit_link1">
+				</div>
+				<div class="form-group">
+					<label for="edit_link1_name">Link1 Name</label>
+					<input type="text" class="form-control" id="edit_link1_name">
+				</div>
+				<div class="form-group">
+					<label for="edit_link2">Link2</label>
+					<input type="text" class="form-control" id="edit_link2">
+				</div>
+				<div class="form-group">
+					<label for="edit_link2_name">Link2 Name</label>
+					<input type="text" class="form-control" id="edit_link2_name">
+				</div>
+				<b>Catégories</b>
+				<div id="categories"></div>
+				<button class="btn btn-default btn-success" id="edit_save">Save</button>
+			</div>
+		</div>
+	</div>
+<script src="assets/libs/jquery/jquery-1.12.4.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/data/categories.js"></script>
+<script src="assets/app/backoffice.js"></script>
+</body>
+</html>

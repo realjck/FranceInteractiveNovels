@@ -31,12 +31,13 @@ body{
 	position: fixed;
     z-index: 1;
     background-color: #fee9bb;
+    width: 100vw;
     height: 200vh;
 	color: white;
 }
 #infopage_top > img{
-	width: 150px;
-	margin-left: calc(50vw - 75px);
+    width: 15vh;
+    margin-left: calc(50vw - 7.5vh);
 	margin-top: 50px;
 }
 .infopage h1 {
@@ -97,10 +98,15 @@ i.fas.fa-info-circle {
 #infopage_banner {
 	width: 100vw;
 	height: 40vh;
-	background: url('../images/html/banner.png');
+	background: url('../images/html/banner.jpg');
 	background-size: cover;
 	background-position: top;
     background-repeat: no-repeat;
+}
+@media (max-height: 600px) {
+	#infopage_banner {
+		display: none;
+	}
 }
 #infopage_box {
     color: black;
@@ -113,7 +119,6 @@ i.fas.fa-info-circle {
     background-color: white;
     border-radius: 15px;
     padding: 10px;
-    border: 5px solid black;
 }
 #infopage_box div img {
     width: 15px;
