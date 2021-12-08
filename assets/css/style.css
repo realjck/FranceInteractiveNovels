@@ -34,7 +34,7 @@ body{
     height: 200vh;
 	color: white;
 }
-.infopage img{
+#infopage_top > img{
 	width: 150px;
 	margin-left: calc(50vw - 75px);
 	margin-top: 50px;
@@ -67,18 +67,29 @@ i.fas.fa-info-circle {
     letter-spacing: 0.05em;
     margin-top: 0.35em;
 }
+@media (min-width: 1000px) {
+	.infopage h1 {
+		font-size: 80px;
+	}
+	.infopage h1 span {
+		font-size: 50px;
+	}
+	.infopage h2 {
+		font-size: 24px;
+	}
+}
 .infopage p {
     letter-spacing: 0.05em;
     font-style: italic;
     margin-top: 20px;
 }
-#infopage_top > i {
+#infopage_box > i {
     font-size: 100px;
-    margin-left: calc(50vw - 50px);
     cursor: pointer;
     color: black;
-	margin-top: 25px;
 	text-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+	margin-left: calc(25vw - 50px);
+	margin-top: 15px;
 }
 #infopage_top {
     height: 60vh;
@@ -91,7 +102,21 @@ i.fas.fa-info-circle {
 	background-position: top;
     background-repeat: no-repeat;
 }
-
+#infopage_box {
+    color: black;
+    margin-top: 25px;
+    padding-left: 25vw;
+    width: 50vw;
+    letter-spacing: 0.025em;
+}
+#infopage_box > div {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+#infopage_box div img {
+    width: 15px;
+}
 
 .navbar {
 	width: 100%;
@@ -390,6 +415,18 @@ div#infobox_editor {
 	}
 }
 @media (max-width: 480px) {
+	#infopage_box {
+		padding-left: 5vw;
+		width: 90vw;
+	}
+	#infopage_box > i {
+		margin-left: calc(45vw - 50px);
+	}
+	#infopage_top > img {
+		width: 70px;
+		margin-left: calc(50vw - 35px);
+		margin-top: 30px;
+	}
 	.navbar div {
 		margin-left: 10px;
 		font-size: smaller;

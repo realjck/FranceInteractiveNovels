@@ -11,14 +11,14 @@ $("i.fas.fa-info-circle").on("click", function(){
 });
 
 $("body").css("overflow", "hidden");
-$("#infopage_top > i").hover(function(e){
+$("#infopage_box > i").hover(function(e){
 	$(e.currentTarget).removeClass("far");
 	$(e.currentTarget).addClass("fas");
 }, function(e){
 	$(e.currentTarget).removeClass("fas");
 	$(e.currentTarget).addClass("far");
 });
-$("#infopage_top > i").click(function() {
+$("#infopage_box > i").click(function() {
 	$(".infopage").hide();
 	$("body").css("overflow", "inherit");
 });
