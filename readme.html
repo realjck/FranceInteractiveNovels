@@ -5,8 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Readme</title>
   <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/css/bootstrap.min.css" />
+  <link href="assets/libs/fontawesome/css/all.css" rel="stylesheet" />
+  <style>
+	i {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 15px;
+		font-size: 50px;
+		cursor: pointer;
+	}
+  </style>
 </head>
 <body>
+	<i class="fas fa-times-circle"></i>
 	<div class="container-fluid">
 		<div class="row">
 			<div id="markdown-contents" style="padding:1em"></div>
@@ -20,6 +32,10 @@
 		var sdconv = new showdown.Converter();
 		$("#markdown-contents").html(sdconv.makeHtml(data));
 	}, 'text');
+	
+	$("i").on("click", function(){
+		window.close();
+	});
 </script>
 </body>
 </html>
