@@ -247,6 +247,7 @@ $(".categorie").on("click", function(e){
 			$("#categorie"+n+" i").css("opacity", 1);
 		}
 		filterEntries();
+		$("html, body").scrollTop(0);
 	}
 });
 $("#catall").on("click", function(){
@@ -261,6 +262,7 @@ $("#catall").on("click", function(){
 		Categories[i].active = true;
 	}
 	filterEntries();
+	$("html, body").scrollTop(0);
 });
 function CategorieGetById(n){
 	for (var i=0; i < Categories.length; i++){
