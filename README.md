@@ -1,5 +1,9 @@
 # FRANCE INTERACTIVE NOVELS
+
 ## Guide des visual novels et romans graphiques interactifs francophones
+
+![Banner](assets/images/html/banner.png)
+
 Cette page répertorie les visual novels et romans graphiques interactifs disponibles en Français. Il s'agit d'une liste non-exhaustive de titres sélectionnés vis-à-vis de leur qualité et de leur intérêt.
 
 Ce site contient des captures extraites des différents visual novels énumérés. Celles-ci sont la propriété de leurs auteurs respectifs.
