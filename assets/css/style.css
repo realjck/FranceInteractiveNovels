@@ -30,10 +30,9 @@ body{
 .infopage {
 	position: fixed;
     z-index: 1;
-    background-color: #fee9bb;
+    /* background-color: #eaeaea; */
     width: 100vw;
     height: 200vh;
-	color: white;
 }
 #infopage_top > img{
     width: 15vh;
@@ -46,11 +45,11 @@ body{
     letter-spacing: 0.05em;
 	text-align: center;
     font-size: 40px;
-	color: black;
+	/* color: black; */
     line-height: 20px;
 }
 .infopage h1 span {
-    color: red;
+    /* color: red; */
     text-transform: uppercase;
     font-size: 25px;
 	margin-left: 0.25em;
@@ -63,7 +62,7 @@ i.fas.fa-info-circle {
 .infopage h2 {
     text-align: center;
 	font-size: 15px;
-	color: black;
+	/* color: black; */
     font-weight: 400;
     letter-spacing: 0.05em;
     margin-top: 0.35em;
@@ -87,7 +86,7 @@ i.fas.fa-info-circle {
 #infopage_box > i {
     font-size: 100px;
     cursor: pointer;
-    color: black;
+    /* color: black; */
 	text-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
 	margin-left: calc(25vw - 50px);
 	margin-top: 15px;
@@ -98,7 +97,7 @@ i.fas.fa-info-circle {
 #infopage_banner {
 	width: 100vw;
 	height: 40vh;
-	background: url('../images/html/banner.jpg');
+	background: url('../images/html/banner.png');
 	background-size: cover;
 	background-position: top;
     background-repeat: no-repeat;
@@ -116,7 +115,7 @@ i.fas.fa-info-circle {
     letter-spacing: 0.025em;
 }
 #infopage_box > div {
-    background-color: white;
+    /* background-color: white; */
     border-radius: 15px;
     padding: 10px;
     line-height: 1.4em;

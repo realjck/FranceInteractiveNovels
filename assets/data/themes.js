@@ -11,5 +11,12 @@ var Themes = [
 ["#infobox_note",  "background-color", "#333", "#222"],
 ["#infobox > i",  "color", "#333", "black"],
 ["#navbox",  "color", "#333", "black"],
-["#catall", "color", "black", "white"]
+["#catall", "color", "black", "white"],
+[".infopage", "background-color", "#eaeaea", "#444"],
+[".infopage h1", "color", "black", "white"],
+[".infopage h2", "color", "black", "white"],
+[".infopage h1 span", "color", "red", "white"],
+["#infopage_box > div", "background-color", "white", "#222"],
+["#infopage_box > div", "color", "black", "white"],
+["#infopage_box > i", "color", "black", "white"]
 ];

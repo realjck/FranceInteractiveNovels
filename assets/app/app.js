@@ -20,6 +20,8 @@ $("#infopage_box > i").hover(function(e){
 });
 $("#infopage_box > i").click(function() {
 	$(".infopage").hide();
+	$(".navbar").show();
+	$(".page").show();
 	$("body").css("overflow", "inherit");
 });
 
