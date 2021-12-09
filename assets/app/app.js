@@ -33,8 +33,8 @@ $("#nav_logo").on("click", function(e){
 ////////////////
 
 var currentTheme;
-if (Cookies.get("FranceInteractiveNovels_Theme")){
-	currentTheme = Cookies.get("FranceInteractiveNovels_Theme");
+if (localStorage.getItem("FranceInteractiveNovels_Theme")){
+	currentTheme = localStorage.getItem("FranceInteractiveNovels_Theme");
 	if (currentTheme==3){
 		$("#darkmode").prop( "checked", true );
 	}
@@ -85,7 +85,7 @@ function buildEntries(){
 		html += '</div>';
 		
 		$(".wrapper").append(html);
-		applyTheme(currentTheme);// TODO : COOKIE!!
+		applyTheme(currentTheme);
 	}
 	
 	//  BEHAVIOUR ITEMS
@@ -361,5 +361,5 @@ function applyTheme(t){
 	for (var i=0; i < Themes.length; i++){
 		$(Themes[i][0]).css(Themes[i][1], Themes[i][t]);
 	}
-	Cookies.set("FranceInteractiveNovels_Theme", t, { expires: 90 });
+	localStorage.setItem("FranceInteractiveNovels_Theme", t);
 }
