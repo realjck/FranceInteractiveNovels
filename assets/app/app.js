@@ -56,7 +56,7 @@ for (var i=0; i < Categories.length; i++){
 $.getJSON("assets/data/entries.json", function(json) {
     Entries = json;
 	
-	sortEntries("release");
+	Entries = shuffle(Entries); // "shuffle" as default view
 	
 	buildEntries();
 });
@@ -318,6 +318,25 @@ function sortEntries(val, asc){
 			return 0;
 	}
 }
+// SHUFFLE
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
 
 $(".navsort").on("click", function(e){
 	
@@ -340,6 +359,17 @@ $(".navsort").on("click", function(e){
 		$(".navsort i").addClass("fa-angle-down");
 	}
 	sortEntries(val, asc);
+	$(".wrapper").empty();
+	buildEntries();
+	filterEntries();
+	$("html, body").scrollTop(0);
+});
+
+$("#navshuffle").on("click", function(e){
+	$(".navsort").removeClass("active");
+	
+	Entries = shuffle(Entries);
+	
 	$(".wrapper").empty();
 	buildEntries();
 	filterEntries();

@@ -21,7 +21,7 @@ Code source : [github.com/realjck/franceinteractivenovels](https://github.com/re
 ### Ressources
 * Visuel de couverture : Katawa Shoujo
 * jQuery 1.12.4
-* Font Awesome Free 5.15.4
+* Font Awesome Web 6.1.1
 * showdown 1.9.1
 * Bootstrap 3.3.7
 
