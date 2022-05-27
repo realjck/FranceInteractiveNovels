@@ -2,9 +2,11 @@
 //********************
 
 var Entries;
+var items_array;
+var item_shown_index;
+const url = new URL(window.location.href);
 
 // LANDING PAGE
-
 
 $("i.fas.fa-info-circle").on("click", function(){
 	window.open("readme.html");
@@ -19,11 +21,14 @@ $("#infopage_box > i").hover(function(e){
 	$(e.currentTarget).addClass("far");
 });
 $("#infopage_box > i").click(function() {
+	OpenSite();
+});
+function OpenSite(){
 	$(".infopage").hide();
 	$(".navbar").show();
 	$(".page").show();
 	$("body").css("overflow", "inherit");
-});
+}
 
 $("#nav_logo").on("click", function(e){
 	$(".infopage").show();
@@ -59,6 +64,16 @@ $.getJSON("assets/data/entries.json", function(json) {
 	Entries = shuffle(Entries); // "shuffle" as default view
 	
 	buildEntries();
+	
+	// HASH ?
+	if (url.hash && (url.hash != "#main") && EntryGetByName(url.hash.substr(1))){
+		OpenSite();
+		$("body").css("overflow", "hidden");
+		$("#infobox_overlay").show();
+		$("#infobox").show();
+		showEntry(EntryGetByName(url.hash.substr(1)), true);
+	}
+
 });
 
 // ENTRIES
@@ -116,10 +131,11 @@ function buildEntries(){
 	});
 }
 
-var items_array;
-var item_shown_index;
-
-function showEntry(e){
+function showEntry(e, noArrows){
+	
+	url.hash = Entries[e].name;
+	window.location.href = url;
+	
 	$("#infobox_note").html(Entries[e].note);
 	var months = [null, "jan.", "fev.", "mar.", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "dec."];
 	var reldate = Entries[e].release.split("-");
@@ -169,12 +185,22 @@ function showEntry(e){
 	
 	$("#infobox").scrollTop(0);
 	
-	showHideArrows();
+	if (!noArrows){
+		showHideArrows();
+	}
 }
 
 function EntryGetById(n){
 	for (var i=0; i < Entries.length; i++){
 		if (n == Entries[i].id) {
+			return i;
+			break;
+		}
+	}
+}
+function EntryGetByName(name){
+	for (var i=0; i < Entries.length; i++){
+		if (name == Entries[i].name) {
 			return i;
 			break;
 		}
@@ -188,6 +214,8 @@ $("#infobox > i").on("click", function(){
 	$("#infobox").hide();
 	$("#navbox_left").hide();
 	$("#navbox_right").hide();
+	url.hash = "main";
+	window.location.href = url;
 });
 
 // NAV ITEMS
