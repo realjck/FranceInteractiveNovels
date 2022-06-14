@@ -391,9 +391,10 @@ div#infobox_editor {
 	font-weight: 500;
 }
 #infos_footer {
-    padding: 20px 0px;
+    padding: 20px 20px;
     text-align: center;
     line-height: 20px;
+	margin-bottom: 40px;
 }
 a, a:hover, a:active {
 	font-weight: 800;
@@ -409,6 +410,17 @@ a, a:hover, a:active {
 	}
 	h1 {
 		font-size: 32px;
+	}
+	#infos p{
+		padding: 15px 20px 0 20px;
+	}
+	#infos_enter {
+		padding: 20px;
+		margin: 10px 0px 10px 0px;
+	}
+	#infos_inlay {
+		padding: 20px 20px 15px 20px;
+		margin: 0 20px;
 	}
 	#infopage_box > i {
 		margin-left: calc(45vw - 40px);
