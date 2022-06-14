@@ -132,7 +132,7 @@ function buildEntries(){
 	// HERE WE SHOW
 	$(window).load(function () {
 		$("#spinner").hide();
-		$("#main").css("opacity", 1).hide().fadeIn();
+		$("#main").css("opacity", "1").hide().fadeIn();
 		
 		$("#infos").css("cursor", "pointer");
 		$("#infos").on("click", function(e){
