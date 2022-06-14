@@ -27,7 +27,9 @@ body{
   width: 5px;
   height: 5px;
 }
-
+.gras {
+	font-weight:900;
+}
 .infopage {
 	position: fixed;
     z-index: 1;
