@@ -130,7 +130,7 @@ function buildEntries(){
 		applyTheme(currentTheme);
 	}
 	// HERE WE SHOW
-	$(window).load(function () {
+	// $(window).load(function () {
 		$("#spinner").hide();
 		$("#main").css("opacity", "1").hide().fadeIn();
 		
@@ -138,7 +138,7 @@ function buildEntries(){
 		$("#infos").on("click", function(e){
 			OpenSite();
 		});
-	});
+	// });
 	
 	//  BEHAVIOUR ITEMS
 	// ----------------
