@@ -31,19 +31,7 @@ $("#nav_info").on("click", function(e){
 });
 
 // get date:
-function fetchHeader(url, wch) {
-    try {
-        var req=new XMLHttpRequest();
-        req.open("HEAD", url, false);
-        req.send(null);
-        if(req.status== 200){
-            return req.getResponseHeader(wch);
-        }
-        else return false;
-    } catch(er) {
-        return er.message;
-    }
-}
+
 Date.prototype.yyyymmdd = function() {
   var mm = this.getMonth() + 1; // getMonth() is zero-based
   var dd = this.getDate();
@@ -53,11 +41,17 @@ Date.prototype.yyyymmdd = function() {
           this.getFullYear()
          ].join('/');
 };
-
-var date_mod = new Date(Date.parse(fetchHeader("assets/data/entries.json",'Last-Modified'))).yyyymmdd();
-
-$("#infos_date").html(date_mod);
-
+$.ajax({
+	type: "GET",
+	async: true,
+	url : "assets/data/entries.json",
+	dataType : "json",
+	success: function(data, textStatus, request){
+		var lastModified = request.getResponseHeader("Last-Modified");
+		var date_mod = new Date(Date.parse(lastModified)).yyyymmdd();
+		$("#infos_date").html(date_mod);
+	}
+});
 
 ////////////////
 
@@ -136,7 +130,7 @@ function buildEntries(){
 		applyTheme(currentTheme);
 	}
 	// HERE WE SHOW
-	// $(window).load(function () { // HOTFIX MOBILE
+	$(window).load(function () {
 		$("#spinner").hide();
 		$("#main").css("opacity", 1).hide().fadeIn();
 		
@@ -144,7 +138,7 @@ function buildEntries(){
 		$("#infos").on("click", function(e){
 			OpenSite();
 		});
-	// });
+	});
 	
 	//  BEHAVIOUR ITEMS
 	// ----------------
