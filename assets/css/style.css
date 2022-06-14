@@ -354,6 +354,7 @@ div#infobox_editor {
 }
 #infos {
     border-radius: 15px;
+	letter-spacing: 0.1em;
 }
 #infos p{
 	font-size: 14px;
@@ -390,7 +391,7 @@ div#infobox_editor {
 	font-weight: 500;
 }
 #infos_footer {
-    padding: 20px 60px;
+    padding: 20px 0px;
     text-align: center;
     line-height: 20px;
 }
