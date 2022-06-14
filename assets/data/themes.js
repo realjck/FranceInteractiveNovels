@@ -2,6 +2,7 @@ var Themes = [
 [".navbar", "background-color", "white", "#444"],
 ["body", "background-color", "white", "#444"],
 ["body", "color", "black", "white"],
+["a", "color", "black", "white"],
 [".article", "border-color", "white", "#444"],
 [".article", "background-color", "#e8e8e8", "#2b2b2b"],
 [".wrapper", "color", "#333", "#eaeaea"],
@@ -18,5 +19,9 @@ var Themes = [
 [".infopage h1 span", "color", "red", "white"],
 ["#infopage_box > div", "background-color", "white", "#222"],
 ["#infopage_box > div", "color", "black", "white"],
-["#infopage_box > i", "color", "black", "white"]
+["#infopage_box > i", "color", "black", "white"],
+["#infos_inlay", "background-color", "#e8e8e8", "#2b2b2b"],
+["#infos", "background-color", "white", "#1b1b1b"],
+["#infos_enter > div", "background-color", "black", "#666"],
+["#infos_enter > div", "color", "white", "white"],
 ];

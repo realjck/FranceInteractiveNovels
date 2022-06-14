@@ -8,32 +8,56 @@ const url = new URL(window.location.href);
 
 // LANDING PAGE
 
-$("i.fas.fa-info-circle").on("click", function(){
-	window.open("readme.html");
-});
-
 $("body").css("overflow", "hidden");
-$("#infopage_box > i").hover(function(e){
-	$(e.currentTarget).removeClass("far");
-	$(e.currentTarget).addClass("fas");
-}, function(e){
-	$(e.currentTarget).removeClass("fas");
-	$(e.currentTarget).addClass("far");
-});
-$("#infopage_box > i").click(function() {
-	OpenSite();
-});
 function OpenSite(){
-	$(".infopage").hide();
-	$(".navbar").show();
-	$(".page").show();
+	$("#infos").fadeOut();
+	$("#infobox_overlay").hide();
+	$("#navbox").show();
+	
 	$("body").css("overflow", "inherit");
+	$("html, body").scrollTop(0);
 }
 
-$("#nav_logo").on("click", function(e){
-	$(".infopage").show();
+// added after loading:
+// $("#infos").on("click", function(e){
+	// OpenSite();
+// });
+
+$("#nav_info").on("click", function(e){
+	$("#infos").fadeIn();
+	$("#infobox_overlay").show();
+	$("#navbox").hide();
 	$("body").css("overflow", "hidden");
 });
+
+// get date:
+function fetchHeader(url, wch) {
+    try {
+        var req=new XMLHttpRequest();
+        req.open("HEAD", url, false);
+        req.send(null);
+        if(req.status== 200){
+            return req.getResponseHeader(wch);
+        }
+        else return false;
+    } catch(er) {
+        return er.message;
+    }
+}
+Date.prototype.yyyymmdd = function() {
+  var mm = this.getMonth() + 1; // getMonth() is zero-based
+  var dd = this.getDate();
+
+  return [(dd>9 ? '' : '0') + dd,
+          (mm>9 ? '' : '0') + mm,
+          this.getFullYear()
+         ].join('/');
+};
+
+var date_mod = new Date(Date.parse(fetchHeader("assets/data/entries.json",'Last-Modified'))).yyyymmdd();
+
+$("#infos_date").html(date_mod);
+
 
 ////////////////
 
@@ -46,6 +70,7 @@ if (localStorage.getItem("FranceInteractiveNovels_Theme")){
 } else {
 	currentTheme = 2;
 }
+applyTheme(currentTheme);
 
 // CATEGORIES
 //-----------
@@ -60,6 +85,14 @@ for (var i=0; i < Categories.length; i++){
 // LOAD DATA
 $.getJSON("assets/data/entries.json", function(json) {
     Entries = json;
+	
+	// infos
+	$("#infos_number").html(Entries.length);
+	var l = "<li>"+Entries[Entries.length-1].title+" ("+Entries[Entries.length-1].release.substr(0,4)+")</li>";
+	l += "<li>"+Entries[Entries.length-2].title+" ("+Entries[Entries.length-2].release.substr(0,4)+")</li>";
+	l += "<li>"+Entries[Entries.length-3].title+" ("+Entries[Entries.length-3].release.substr(0,4)+")</li>";
+	
+	$("#infos_list").html(l);
 	
 	Entries = shuffle(Entries); // "shuffle" as default view
 	
@@ -102,6 +135,16 @@ function buildEntries(){
 		$(".wrapper").append(html);
 		applyTheme(currentTheme);
 	}
+	// HERE WE SHOW
+	$(window).load(function () {
+		$("#spinner").hide();
+		$("#main").css("opacity", 1).hide().fadeIn();
+		
+		$("#infos").css("cursor", "pointer");
+		$("#infos").on("click", function(e){
+			OpenSite();
+		});
+	});
 	
 	//  BEHAVIOUR ITEMS
 	// ----------------
@@ -185,6 +228,8 @@ function showEntry(e, noArrows){
 	
 	$("#infobox").scrollTop(0);
 	
+	$("#infobox").hide().fadeIn();
+	
 	if (!noArrows){
 		showHideArrows();
 	}
@@ -210,8 +255,8 @@ function EntryGetByName(name){
 // OVERLAY CLOSE
 $("#infobox > i").on("click", function(){
 	$("body").css("overflow", "inherit");
-	$("#infobox_overlay").hide();
-	$("#infobox").hide();
+	$("#infobox_overlay").fadeOut();
+	$("#infobox").fadeOut();
 	$("#navbox_left").hide();
 	$("#navbox_right").hide();
 	url.hash = "main";
