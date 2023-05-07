@@ -28,3 +28,6 @@ body {
     max-height: 100vh;
 	padding-bottom: 1em;
 }
+.container-fluid {
+    margin-top: 30px;
+}
