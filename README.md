@@ -1,4 +1,4 @@
-# FRANCE INTERACTIVE NOVELS
+# interactive-novels.fr
 
 ## Guide des visual novels et romans graphiques interactifs francophones
 
