@@ -53,7 +53,7 @@ h1 span {
     text-transform: uppercase;
     font-size: 20px;
 	margin-left: 0.25em;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 .navbar {
 	width: 100%;
@@ -74,7 +74,7 @@ h1 span {
     line-height: 50px;
 	cursor: pointer;
 	margin-left: 15px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 .navbar > div> div.active {
     font-weight: 900;
@@ -121,7 +121,7 @@ h1 span {
 	cursor: pointer;
 	text-transform: uppercase;
 	font-size: 13px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 .categorie div {
 	display: flex;
@@ -129,7 +129,6 @@ h1 span {
 }
 #catall {
 	font-weight: 900;
-	/* color: black; */
 }
 .categorie i {
     padding: 10px 10px 0px 0px;
@@ -243,7 +242,7 @@ h1 span {
 }
 #infobox_description {
     margin: 10px 20px 0 20px;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.02em;
 }
 #infobox_infos {
     display: flex;
@@ -286,7 +285,7 @@ div#infobox_editor {
 #infobox ul {
     font-weight: 400;
     padding-left: 1.2em;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.02em;
 }
 #infobox li {
     margin-top: 0.5em;
@@ -358,7 +357,7 @@ div#infobox_editor {
 }
 #infos {
     border-radius: 15px;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.02em;
 }
 #infos p{
 	font-size: 14px;
