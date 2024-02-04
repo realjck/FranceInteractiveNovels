@@ -20,7 +20,7 @@ Vous y retrouverez les informations telles que la durée, le prix, et des liens 
 
 ### Utilisation en local
 
-L'application JS de ce CMS est très simple (moins de 500 lignes), n'hésitez pas à la cloner/forker le projet pour votre propre utilisation si vous le souhaitez et à me contacter si besoin d'aide.
+Le code source de ce CMS est très simple (moins de 500 lignes en JS), n'hésitez pas à cloner/forker le projet pour votre propre utilisation si vous le souhaitez, et à me contacter si besoin d'aide ou pour m'en informer.
 
 ### Licence
 
