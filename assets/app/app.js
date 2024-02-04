@@ -62,7 +62,8 @@ if (localStorage.getItem("FranceInteractiveNovels_Theme")){
 		$("#darkmode").prop( "checked", true );
 	}
 } else {
-	currentTheme = 2;
+	currentTheme = 3;
+	$("#darkmode").prop( "checked", true );
 }
 applyTheme(currentTheme);
 
