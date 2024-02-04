@@ -8,7 +8,7 @@ var Themes = [
 [".wrapper", "color", "#333", "#eaeaea"],
 ["#infobox_overlay", "background-color", "white", "#444"],
 ["#infobox", "background-color", "white", "#333"],
-["#infobox_points",  "background-color", "#eaeaea", "#222"],
+["#infobox_points",  "background-color", "#eaeaea", "#3A3A3A"],
 ["#infobox_note",  "background-color", "#333", "#222"],
 ["#infobox > i",  "color", "#333", "black"],
 ["#navbox",  "color", "#333", "black"],
@@ -22,6 +22,6 @@ var Themes = [
 ["#infopage_box > i", "color", "black", "white"],
 ["#infos_inlay", "background-color", "#e8e8e8", "#2b2b2b"],
 ["#infos", "background-color", "white", "#1b1b1b"],
-["#infos_enter > div", "background-color", "black", "#666"],
+["#infos_enter > div", "background-color", "black", "black"],
 ["#infos_enter > div", "color", "white", "white"],
 ];

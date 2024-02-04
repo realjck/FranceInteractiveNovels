@@ -1,7 +1,6 @@
 body{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -11,7 +10,7 @@ body{
 
 * {
 	margin: 0;
-	font-family: "Helv", sans-serif;
+	font-family: "Meslo", sans-serif;
 }
 /* custom scrollbar */
 ::-webkit-scrollbar-track {
@@ -33,7 +32,6 @@ body{
 .infopage {
 	position: fixed;
     z-index: 1;
-    /* background-color: #eaeaea; */
     width: 100vw;
     height: 200vh;
 }
@@ -47,7 +45,6 @@ h1 {
     font-weight: normal;
 	text-align: center;
     font-size: 36px;
-	/* color: black; */
     line-height: 30px;
 	margin: 40px 0 20px 0;
 }
@@ -81,6 +78,10 @@ h1 span {
 .navbar > div> div.active {
     font-weight: 900;
     letter-spacing: normal;
+	color: #2196f3;
+}
+.highlight {
+	color: #2196f3;
 }
 .navbar i {
 	margin-right: 5px;
@@ -140,7 +141,6 @@ h1 span {
 	justify-content: flex-start;
 	padding-top: 50px;
 	padding-left: 205px;
-	/* color: #333; */
 }
 .article {
 	border-radius: 15px;
@@ -148,9 +148,7 @@ h1 span {
 	height: 190px;
 	padding: 10px;
     border: 5px solid;
-    /* background-color: #e8e8e8; */
 	cursor: pointer;
-	/* border-color: white; */
 }
 .article:hover {
     border: 5px solid;
@@ -172,7 +170,7 @@ h1 span {
 .article .note {
 	display:inline-block;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 18px;
     margin-top: -5px;
 }
 .article .thumb {
@@ -181,7 +179,7 @@ h1 span {
 }
 .article .titre {
 	font-weight: 800;
-	font-size: 15px;
+	font-size: 12px;
 	line-height: 15px;
 	margin-top: 5px;
 	height: 40px;
@@ -203,6 +201,10 @@ h1 span {
 	margin-left: 8px;
 }
 
+#infobox {
+	padding-bottom: 30px;
+}
+
 #infobox, #infos {
 	width: 60vh;
 	height: 90vh;
@@ -212,19 +214,19 @@ h1 span {
 	left: calc((100vw - 60vh)/2);
 	top: 5vh;
 	overflow: auto;
-	font-size: 0.8em;
+	font-size: 0.7em;
 }
 #infobox_note {
     font-size: 2em;
     padding: 20px 0 10px 8px;
     background-color: #333;
-    width: 45px;
+    width: 55px;
     color: white;
     margin-left: 20px;
 }
 #infobox_release {
     position: absolute;
-    left: 80px;
+    left: 100px;
     top: 47px;
     text-transform: uppercase;
 }
@@ -236,9 +238,10 @@ h1 span {
     font-size: 2em;
     padding: 10px 20px;
     font-weight: 900;
+	margin-bottom: -15px;
 }
 #infobox_description {
-    margin: 0 20px 0 20px;
+    margin: 10px 20px 0 20px;
 	letter-spacing: 0.05em;
 }
 #infobox_infos {
@@ -293,7 +296,7 @@ div#infobox_editor {
 #infobox_categories {
     display: flex;
     flex-wrap: wrap;
-    margin: 5px 20px;
+    margin: 5px 20px 15px;
 }
 #infobox_categories div {
 	font-weight: 500;
@@ -454,29 +457,8 @@ a, a:hover, a:active {
 FONTS
 */
 @font-face {
-	font-family: "Helv";
-	src: url(../fonts/HelveticaNeueLTStd-Lt.otf) format("opentype");
-	font-weight: 400;
-}
-@font-face {
-	font-family: "Helv";
-	src: url(../fonts/HelveticaNeueLTStd-Roman.otf) format("opentype");
-	font-weight: 500;
-}
-@font-face {
-	font-family: "Helv";
-	src: url(../fonts/HelveticaNeueLTStd-Hv.otf) format("opentype");
-	font-weight: 800;
-}
-@font-face {
-	font-family: "Helv";
-	src: url(../fonts/HelveticaNeueLTStd-Blk.otf) format("opentype");
-	font-weight: 900;
-}
-@font-face {
-	font-family: "Lobster";
-	src: url(../fonts/Lobster-Regular.ttf) format("truetype");
-	font-weight: normal;
+	font-family: "Meslo";
+	src: url(./../fonts/Meslo/MesloLGLRegular.ttf) format("truetype");
 }
 
 /* The switch - the box around the slider */
@@ -529,7 +511,6 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
