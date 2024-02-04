@@ -6,6 +6,7 @@ body{
     user-select: none;
 	scroll-behavior: smooth;
 	-webkit-tap-highlight-color: transparent;
+	max-height: 100%;
 }
 
 * {
@@ -207,12 +208,12 @@ h1 span {
 
 #infobox, #infos {
 	width: 60vh;
-	height: 90vh;
+	height: 80vh;
 	position: fixed;
 	background-color: white;
 	box-shadow: 2px 2px 20px black;
 	left: calc((100vw - 60vh)/2);
-	top: 5vh;
+	top: 10vh;
 	overflow: auto;
 	font-size: 0.7em;
 }
