@@ -6,11 +6,11 @@ L'émergence de ce style de Jeux Vidéos en versions françaises date du milieu 
 
 ---
 
-Ce site présente une sélection de Visual Novels en langue française que j'ai effectué autour de 2020. Je les ai rassemblés de par leur intérêt littéraire et de leur qualité globale d'un point de vue artistique et technique.
+Ce site présente une sélection de Visual Novels en langue française que j'ai effectué autour de 2020. Je les ai choisis en fonction de leur intérêt littéraire et de leur qualité globale d'un point de vue artistique et technique. Il peut être utile pour toute personne francophone s'intéressant ou souhaitant découvrir ce genre.
 
 Vous y retrouverez les informations telles que la durée, le prix, et des liens vers les sites officiels et vers la VN internet Database pour chacun.
 
-## [> Lien vers le site](https://realjck.github.io/franceinteractivenovels/)
+# [> Lien vers le site](https://realjck.github.io/franceinteractivenovels/)
 
 ---
 
