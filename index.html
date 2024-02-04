@@ -53,81 +53,83 @@
   </style>
 </head>
 <body>
-<div id="spinner"><div></div><div></div></div>
-<div id="main" style="opacity:0">
-	<div class="navbar">
-		<div id="navbar_left">
-			<div id="nav_info"><i class="fa-solid fa-circle-info"></i></div>
-			<div id="navshuffle"><i class="fa-solid fa-shuffle"></i></div>
-			<div id="navsort_release" class="navsort"><i class="fas fa-angle-down"></i>Date</div>
-			<div id="navsort_note" class="navsort"><i class="fas fa-angle-down"></i>Note</div>
-			<div id="navsort_title" class="navsort"><i class="fas fa-angle-down"></i>A-Z</div>
+<div id="wrapper">
+	<div id="spinner"><div></div><div></div></div>
+	<div id="main" style="opacity:0">
+		<div class="navbar">
+			<div id="navbar_left">
+				<div id="nav_info"><i class="fa-solid fa-circle-info"></i></div>
+				<div id="navshuffle"><i class="fa-solid fa-shuffle"></i></div>
+				<div id="navsort_release" class="navsort"><i class="fas fa-angle-down"></i>Date</div>
+				<div id="navsort_note" class="navsort"><i class="fas fa-angle-down"></i>Note</div>
+				<div id="navsort_title" class="navsort"><i class="fas fa-angle-down"></i>A-Z</div>
+			</div>
+			<!-- Rounded switch -->
+			<label class="switch">
+				<i class="fas fa-sun"></i>
+			  <input id="darkmode" type="checkbox">
+			  <span class="slider round"></span>
+			</label>
 		</div>
-		<!-- Rounded switch -->
-		<label class="switch">
-			<i class="fas fa-sun"></i>
-		  <input id="darkmode" type="checkbox">
-		  <span class="slider round"></span>
-		</label>
-	</div>
-	<div class="page">
-		<div class="sidebar">
-			<div class="categorie" id="catall">
-				<div>tout cocher</div>
+		<div class="page">
+			<div class="sidebar">
+				<div class="categorie" id="catall">
+					<div>tout cocher</div>
+					<div>
+						<i id ="catall-on" class="fas fa-check-circle"></i>
+					</div>
+				</div>
+			</div>
+			<div id class="wrapper"></div>
+			<div id="infobox_overlay"></div>
+			<div id="infos">
+				<h1>France<br><span>interactive Novels.fr</span></h1>
+				<div id="infos_inlay">
+					<div>Dernière mise à jour&nbsp;: <span id="infos_date"></span></div>
+					<div>Nombre de titres répertoriés&nbsp;: <span id="infos_number"></span></div>
+					<div>Derniers ajouts&nbsp;:
+						<ul id="infos_list"></ul>
+					</div>
+				</div>
+				<div id="infos_enter">
+					<div>Bienvenue ! 🥐🥖</div>
+				</div>
 				<div>
-					<i id ="catall-on" class="fas fa-check-circle"></i>
+					<p>Cette web-app est un <span class="gras highlight">guide des Visual Novel et Romans Graphiques en langue française</span> ; il répertorie des œuvres originales en français ou proposant une traduction française dans leur version officielle.</p>
+					<p>Les VN de ce site sont choisis en fonction de leur intérêt littéraire et de leur qualité globale d'un point de vue artistique et technique. Ce guide peut être utile pour toute personne francophone s'intéressant ou souhaitant découvrir ce genre.</p>
+					<p>Des mises à jour en fonction des nouveautés ou des titres plus anciens peuvent venir compléter cette page au fil du temps.</p>
+				</div>
+				<div id="infos_footer">Hébergée chez <i class="fa-brands fa-github"></i> <a href="https://github.com/realjck/france-interactive-novels" target="_blank">Github</a><br>Contact <a href="mailto:jckleinbourg@gmail.com" target="_blank">jck</a> / <i class="fa-brands fa-discord"></i> Real#6235
 				</div>
 			</div>
-		</div>
-		<div id class="wrapper"></div>
-		<div id="infobox_overlay"></div>
-		<div id="infos">
-			<h1>France<br><span>interactive Novels.fr</span></h1>
-			<div id="infos_inlay">
-				<div>Dernière mise à jour&nbsp;: <span id="infos_date"></span></div>
-				<div>Nombre de titres répertoriés&nbsp;: <span id="infos_number"></span></div>
-				<div>Derniers ajouts&nbsp;:
-					<ul id="infos_list"></ul>
+			<div id="navbox" style="display:none">
+				<i id="navbox_left" class="far fa-arrow-alt-circle-left" style="display:none"></i>
+				<i id="navbox_right" class="far fa-arrow-alt-circle-right" style="display:none"></i>
+			</div>
+			<div id="infobox" style="display:none">
+				<i class="far fa-times-circle"></i>
+				<div id="infobox_note"></div>
+				<div id="infobox_release"></div>
+				<div id="infobox_title"></div>
+				<div id="infobox_categories"></div>
+				<img alt="Image de jeu du visual novel">
+				<div id="infobox_description"></div>
+				<div id="infobox_infos">
+					<div id="infobox_editor"></div>
+					<div id="infobox_price"></div>
+					<div id="infobox_duration"></div>
+					<div id="infobox_link1"></div>
+					<div id="infobox_link2"></div>
 				</div>
-			</div>
-			<div id="infos_enter">
-				<div>Bienvenue ! 🥐🥖</div>
-			</div>
-			<div>
-				<p>Cette web-app est un <span class="gras highlight">guide des Visual Novel et Romans Graphiques en langue française</span> ; il répertorie des œuvres originales en français ou proposant une traduction française dans leur version officielle.</p>
-				<p>Les VN de ce site sont choisis en fonction de leur intérêt littéraire et de leur qualité globale d'un point de vue artistique et technique. Ce guide peut être utile pour toute personne francophone s'intéressant ou souhaitant découvrir ce genre.</p>
-				<p>Des mises à jour en fonction des nouveautés ou des titres plus anciens peuvent venir compléter cette page au fil du temps.</p>
-			</div>
-			<div id="infos_footer">Hébergée chez <i class="fa-brands fa-github"></i> <a href="https://github.com/realjck/france-interactive-novels" target="_blank">Github</a><br>Contact <a href="mailto:jckleinbourg@gmail.com" target="_blank">jck</a> / <i class="fa-brands fa-discord"></i> Real#6235
-			</div>
-		</div>
-		<div id="navbox" style="display:none">
-			<i id="navbox_left" class="far fa-arrow-alt-circle-left" style="display:none"></i>
-			<i id="navbox_right" class="far fa-arrow-alt-circle-right" style="display:none"></i>
-		</div>
-		<div id="infobox" style="display:none">
-			<i class="far fa-times-circle"></i>
-			<div id="infobox_note"></div>
-			<div id="infobox_release"></div>
-			<div id="infobox_title"></div>
-			<div id="infobox_categories"></div>
-			<img alt="Image de jeu du visual novel">
-			<div id="infobox_description"></div>
-			<div id="infobox_infos">
-				<div id="infobox_editor"></div>
-				<div id="infobox_price"></div>
-				<div id="infobox_duration"></div>
-				<div id="infobox_link1"></div>
-				<div id="infobox_link2"></div>
-			</div>
-			<div id="infobox_points">
-				<div id="infobox_plus">
-					<i class="fas fa-heart"></i>Point(s) fort(s)
-					<ul></ul>
-				</div>
-				<div id="infobox_minus">
-					<i class="fas fa-meh"></i>Point(s) faible(s)
-					<ul></ul>
+				<div id="infobox_points">
+					<div id="infobox_plus">
+						<i class="fas fa-heart"></i>Point(s) fort(s)
+						<ul></ul>
+					</div>
+					<div id="infobox_minus">
+						<i class="fas fa-meh"></i>Point(s) faible(s)
+						<ul></ul>
+					</div>
 				</div>
 			</div>
 		</div>

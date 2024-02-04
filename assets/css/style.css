@@ -27,6 +27,11 @@ body{
   width: 5px;
   height: 5px;
 }
+
+#wrapper {
+	height: 100%;
+}
+
 .gras {
 	font-weight:900;
 }
