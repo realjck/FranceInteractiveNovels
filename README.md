@@ -10,7 +10,7 @@ Ce site présente une sélection de Visual Novels en langue française que j'ai 
 
 Vous y retrouverez les informations telles que la durée, le prix, et des liens vers les sites officiels et vers la VN internet Database pour chacun.
 
-# [> Lien vers le site](https://realjck.github.io/franceinteractivenovels/)
+# [> Lien vers le site](https://realjck.github.io/france-interactive-novels/)
 
 ---
 
