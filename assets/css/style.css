@@ -1,9 +1,14 @@
-body{
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+/*
+	FRANCE INTERACTIVE NOVELS
+	Style CSS
+ */
+
+body {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	scroll-behavior: smooth;
 	-webkit-tap-highlight-color: transparent;
 	max-height: 100%;
@@ -13,19 +18,24 @@ body{
 	margin: 0;
 	font-family: "Meslo", sans-serif;
 }
+
 /* custom scrollbar */
+
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+	background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #000;
+	background: #000;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #000;
+	background: #000;
 }
+
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+	width: 5px;
+	height: 5px;
 }
 
 #wrapper {
@@ -33,75 +43,86 @@ body{
 }
 
 .gras {
-	font-weight:900;
+	font-weight: 900;
 }
+
 .infopage {
 	position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 200%;
+	z-index: 1;
+	width: 100%;
+	height: 200%;
 }
-#infopage_top > img{
-    width: 15vh;
-    margin-left: calc(50vw - 7.5vh);
+
+#infopage_top > img {
+	width: 15vh;
+	margin-left: calc(50vw - 7.5vh);
 	margin-top: 50px;
 }
+
 h1 {
 	font-family: "Lobster", sans-serif;
-    font-weight: normal;
+	font-weight: normal;
 	text-align: center;
-    font-size: 36px;
-    line-height: 30px;
+	font-size: 36px;
+	line-height: 30px;
 	margin: 40px 0 20px 0;
 }
+
 h1 span {
-    text-transform: uppercase;
-    font-size: 20px;
+	text-transform: uppercase;
+	font-size: 20px;
 	margin-left: 0.25em;
-    letter-spacing: 0.02em;
 }
+
 .navbar {
 	width: 100%;
 	height: 50px;
 	background-color: white;
 	position: fixed;
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
+
 #navbar_left {
 	display: flex;
 }
+
 #navbar_left > div {
 	white-space: pre;
 }
+
 .navbar > div > div {
-    text-transform: uppercase;
-    line-height: 50px;
+	text-transform: uppercase;
+	line-height: 50px;
 	cursor: pointer;
 	margin-left: 15px;
-    letter-spacing: 0.02em;
 }
-.navbar > div> div.active {
-    font-weight: 900;
-    letter-spacing: normal;
+
+.navbar > div > div.active {
+	font-weight: 900;
 	color: #2196f3;
 }
+
 .highlight {
 	color: #2196f3;
 }
+
 .navbar i {
 	margin-right: 5px;
 }
+
 #nav_info {
-    width: 40px;
-    height: 40px;
-    margin: 0px -10px 0px 15px;
-    font-size: 1.5em;
+	width: 40px;
+	height: 40px;
+	margin: 0 -10px 0 15px;
+	font-size: 1.5em;
 }
+
 .switch i {
-    margin: 5px 0 0 -35px;
-    font-size: 25px;
+	margin: 5px 0 0 -35px;
+	font-size: 25px;
 }
+
 .page {
 	display: flex;
 }
@@ -113,8 +134,9 @@ h1 span {
 	position: fixed;
 	overflow: scroll;
 }
+
 .sidebar::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 .categorie {
@@ -122,21 +144,24 @@ h1 span {
 	color: white;
 	padding-left: 10px;
 	display: flex;
-    justify-content: space-between;
+	justify-content: space-between;
 	cursor: pointer;
 	text-transform: uppercase;
 	font-size: 13px;
-    letter-spacing: 0.02em;
+	letter-spacing: 0.02em;
 }
+
 .categorie div {
 	display: flex;
 	justify-content: right;
 }
+
 #catall {
 	font-weight: 900;
 }
+
 .categorie i {
-    padding: 10px 10px 0px 0px;
+	padding: 10px 10px 0 0;
 }
 
 .wrapper {
@@ -147,41 +172,47 @@ h1 span {
 	padding-top: 50px;
 	padding-left: 205px;
 }
+
 .article {
 	border-radius: 15px;
 	width: 190px;
 	height: 190px;
 	padding: 10px;
-    border: 5px solid;
+	border: 5px solid;
 	cursor: pointer;
 }
+
 .article:hover {
-    border: 5px solid;
+	border: 5px solid;
 	border-color: black !important;
 }
 
 .article .cats {
-    min-width: 100%;
-    height: 10px;
+	min-width: 100%;
+	height: 10px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
+
 .article .cats div {
-    width: 20px;
-    height: 8px;
+	width: 20px;
+	height: 8px;
 	margin-right: 5px;
 }
+
 .article .note {
-	display:inline-block;
+	display: inline-block;
 	font-weight: 400;
 	font-size: 18px;
-    margin-top: -5px;
+	margin-top: -5px;
 }
+
 .article .thumb {
 	width: 190px;
 	height: 100px;
 }
+
 .article .titre {
 	font-weight: 800;
 	font-size: 12px;
@@ -190,6 +221,7 @@ h1 span {
 	height: 40px;
 	overflow: hidden;
 }
+
 .article .foot {
 	width: 190px;
 	display: flex;
@@ -199,9 +231,11 @@ h1 span {
 	font-weight: 900;
 	font-size: 11px;
 }
+
 .article .foot .prixduree span {
 	margin-right: 5px;
 }
+
 .article .foot .prixduree .space {
 	margin-left: 8px;
 }
@@ -216,116 +250,134 @@ h1 span {
 	position: fixed;
 	background-color: white;
 	box-shadow: 2px 2px 20px black;
-	left: calc((100vw - 60vh)/2);
+	left: calc((100vw - 60vh) / 2);
 	top: 10vh;
 	overflow: auto;
 	font-size: 0.7em;
 }
+
 #infobox_note {
-    font-size: 2em;
-    padding: 20px 0 10px 8px;
-    background-color: #333;
-    width: 55px;
-    color: white;
-    margin-left: 20px;
+	font-size: 2em;
+	padding: 20px 0 10px 8px;
+	background-color: #333;
+	width: 55px;
+	color: white;
+	margin-left: 20px;
 }
+
 #infobox_release {
-    position: absolute;
-    left: 100px;
-    top: 47px;
-    text-transform: uppercase;
+	position: absolute;
+	left: 100px;
+	top: 47px;
+	text-transform: uppercase;
 }
+
 #infobox img {
-    width: calc(100% - 40px);
+	width: calc(100% - 40px);
 	padding-left: 20px;
 }
+
 #infobox_title {
-    font-size: 2em;
-    padding: 10px 20px;
-    font-weight: 900;
+	font-size: 2em;
+	padding: 10px 20px;
+	font-weight: 900;
 	margin-bottom: -15px;
 }
+
 #infobox_description {
-    margin: 10px 20px 0 20px;
-	letter-spacing: 0.02em;
+	margin: 10px 20px 0 20px;
 }
+
 #infobox_infos {
-    display: flex;
+	display: flex;
 	flex-wrap: wrap;
-    font-weight: 900;
-    margin: 10px 20px;
+	font-weight: 900;
+	margin: 10px 20px;
 	line-height: 1.5em;
 }
+
 div#infobox_editor {
-    font-weight: 500;
+	font-weight: 500;
 }
+
 #infobox_infos div {
-    margin-right: 1em;
+	margin-right: 1em;
 }
+
 #infobox_infos a {
 	background-color: black;
-    border-radius: 17px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    padding: 0.3em 0.8em;
-    font-weight: 500;
+	border-radius: 17px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	padding: 0.3em 0.8em;
+	font-weight: 500;
 	box-shadow: 2px 2px 5px rgb(0 0 0 / 50%);
 }
+
 #infobox_points {
-    display: flex;
+	display: flex;
 	justify-content: space-between;
-    margin: 0 20px;
-    background-color: #eaeaea;
-    border-radius: 1em;
+	margin: 0 20px;
+	background-color: #eaeaea;
+	border-radius: 1em;
 	padding: 1em;
 	font-weight: 900;
 }
+
 #infobox_points div {
-    width: 48%;
+	width: 48%;
 }
-#infobox_points i{
+
+#infobox_points i {
 	font-weight: 500;
 }
+
 #infobox ul {
-    font-weight: 400;
-    padding-left: 1.2em;
-	letter-spacing: 0.02em;
+	font-weight: 400;
+	padding-left: 1.2em;
 }
+
 #infobox li {
-    margin-top: 0.5em;
+	margin-top: 0.5em;
 }
+
 #infobox i {
-    margin-right: 0.5em;
+	margin-right: 0.5em;
 }
+
 #infobox_categories {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5px 20px 15px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 5px 20px 15px;
 }
+
 #infobox_categories div {
 	font-weight: 500;
 	text-transform: uppercase;
 	color: white;
 	padding: 0.3em 0.6em;
-    margin-right: 1em;
-    margin-top: 0.5em;
+	margin-right: 1em;
+	margin-top: 0.5em;
 }
+
 #infobox > i {
-    font-size: 4em;
-    position: absolute;
-    right: -0.3em;
-    top: 0.2em;
-    color: #333;
+	font-size: 4em;
+	position: absolute;
+	right: -0.3em;
+	top: 0.2em;
+	color: #333;
 	cursor: pointer;
 	text-shadow: 2px 2px 10px rgb(0 0 0 / 50%);
 }
+
 @media (max-width: 70vh) {
 	#infobox {
 		width: 90vw;
 		left: 5vw;
 	}
 }
+
 #infobox_overlay {
 	width: 100%;
 	height: 100%;
@@ -334,197 +386,232 @@ div#infobox_editor {
 	background-color: white;
 	opacity: 0.9;
 }
+
 #navbox {
-    color: #333;
-    font-size: 100px;
+	color: #333;
+	font-size: 100px;
 	margin-top: calc(50vh - 50px);
 	text-shadow: 2px 2px 10px rgb(0 0 0 / 50%);
-    cursor: pointer;
+	cursor: pointer;
 }
+
 @media (max-width: 90vh) {
 	#navbox {
 		display: none;
 	}
 }
+
 #navbox_left {
 	position: fixed;
-    left: calc(50vw - 30vh - 150px);
+	left: calc(50vw - 30vh - 150px);
 }
+
 #navbox_right {
 	position: fixed;
-    right: calc(50vw - 30vh - 150px);
+	right: calc(50vw - 30vh - 150px);
 }
+
 @media (max-width: 70vh) {
 	#infobox {
 		width: 80vw;
 		left: 10vw;
 	}
 }
+
 #infos {
-    border-radius: 15px;
-	letter-spacing: 0.02em;
+	border-radius: 15px;
 }
-#infos p{
+
+#infos p {
 	font-size: 14px;
 	padding: 15px 40px 0 40px;
-	
+
 }
+
 #infos_enter {
 	padding: 20px;
 	margin: 10px 40px 10px 40px;
 }
+
 #infos_enter > div {
-    text-align: center;
-    font-family: "Lobster", sans-serif;
-    font-size: 25px;
-    padding: 15px;
+	text-align: center;
+	font-family: "Lobster", sans-serif;
+	font-size: 25px;
+	padding: 15px;
 	border-radius: 15px;
 }
+
 #infos_inlay {
 	padding: 20px 40px 15px 40px;
-    margin: 0 60px;
+	margin: 0 60px;
 	font-weight: 800;
-    border-radius: 15px;
+	border-radius: 15px;
 }
+
 #infos_inlay > div {
 	margin-bottom: 10px;
 }
+
 #infos_inlay ul {
-    margin-left: -25px;
+	margin-left: -25px;
 }
+
 #infos_inlay li {
 	margin-top: 5px;
 }
+
 #infos_date, #infos_number, #infos_list {
 	font-weight: 500;
 }
+
 #infos_footer {
-    padding: 20px 20px;
-    text-align: center;
-    line-height: 20px;
+	padding: 20px 20px;
+	text-align: center;
+	line-height: 20px;
 	margin-bottom: 40px;
 }
+
 a, a:hover, a:active {
 	font-weight: 800;
 }
+
 @media (max-width: 480px) {
 	#infopage_box {
 		padding-left: 5vw;
 		width: 90vw;
 	}
+
 	#infos {
 		left: 5vw;
-		width:90vw;
+		width: 90vw;
 	}
+
 	h1 {
 		font-size: 32px;
 	}
-	#infos p{
+
+	#infos p {
 		padding: 15px 20px 0 20px;
 	}
+
 	#infos_enter {
 		padding: 20px;
-		margin: 10px 0px 10px 0px;
+		margin: 10px 0 10px 0;
 	}
+
 	#infos_inlay {
 		padding: 20px 20px 15px 20px;
 		margin: 0 20px;
 	}
+
 	#infopage_box > i {
 		margin-left: calc(45vw - 40px);
 	}
+
 	#infopage_top > img {
 		width: 70px;
 		margin-left: calc(50vw - 35px);
 		margin-top: 30px;
 	}
+
 	.navbar div {
 		margin-left: 10px;
 		font-size: smaller;
 	}
+
 	.sidebar {
 		width: 130px;
 	}
+
 	.wrapper {
 		padding-left: 135px;
 	}
+
 	.categorie {
 		font-size: 12px;
 	}
+
 	.categorie i {
-		padding: 11px 5px 0px 0px;
+		padding: 11px 5px 0 0;
 	}
+
 	.switch i {
 		display: none;
 	}
 }
+
 /*
 FONTS
 */
+
 @font-face {
 	font-family: "Meslo";
 	src: url(./../fonts/Meslo/MesloLGLRegular.ttf) format("truetype");
 }
 
 /* The switch - the box around the slider */
+
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin: 10px;
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	margin: 10px;
 }
 
 /* Hide default HTML checkbox */
+
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+	opacity: 0;
+	width: 0;
+	height: 0;
 }
 
 /* The slider */
+
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+	background-color: #2196F3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+	box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked + .slider:before {
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
 }
 
 /* Rounded sliders */
+
 .slider.round {
-  border-radius: 34px;
+	border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+	border-radius: 50%;
 }
